@@ -6,24 +6,24 @@ import { Plus, ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
-    question: "How can energy and solar companies generate high-quality leads?",
+    question: "How is Top Dog Leads different from buying shared or off-the-shelf lead lists?",
     answer:
-      "By combining targeted outreach, industry-specific messaging, and a multi-channel strategy that reaches decision makers where they already spend their time, from cold calling to email to LinkedIn.",
+      "Shared lists dilute your brand and pit you against competitors in a race to the bottom. We build 100% exclusive, custom campaigns dedicated solely to your enterprise. Every lead generated belongs exclusively to you, built through authentic engagement that positions your brand as the premier authority in your territory.",
   },
   {
-    question: "What types of leads can you help us generate in the energy industry?",
+    question: "How do you handle long sales cycles typical of commercial solar contracts?",
     answer:
-      "We help generate leads across commercial solar, renewable energy, EPCs, and clean-tech providers, focused on companies that are ready to invest in energy solutions.",
+      "Commercial energy decisions take time, which is why our approach extends beyond the initial connection. We design multi-touch nurture sequences that keep your brand top-of-mind with key stakeholders throughout their evaluation period. We don't just deliver a single touchpoint; we nurture high-value accounts until they are ready to sign.",
   },
   {
-    question: "What are the best digital marketing channels for solar leads?",
+    question: "What kind of ROI or conversion rates can we expect from these campaigns?",
     answer:
-      "Cold email, cold calling, LinkedIn outreach, and targeted list building tend to perform best when paired with messaging tailored to the solar buyer's journey.",
+      "Because we target commercial decision-makers with personalized, high-value messaging, our clients see significantly higher engagement rates than standard outbound marketing. While exact ROI depends on your average deal size and regional energy rates, commercial solar projects yield massive lifetime contract values-meaning closing just one or two extra deals per month typically delivers an exponential return on your campaign investment.",
   },
   {
-    question: "Do you offer lead generation services for other industries besides energy & solar?",
+    question: "What happens if we need to scale our lead volume up or down based on team capacity?",
     answer:
-      "Yes, we work across SaaS, manufacturing, healthcare, and more. Our process adapts to the specific challenges and buyers of each industry.",
+      "Flexibility is built into our framework. Whether you are expanding into new territories and need to aggressively ramp up volume, or your engineering team needs a brief pause to absorb incoming project loads, we can easily dial campaign volume up or down to align with your operational capacity.",
   },
 ];
 
@@ -36,8 +36,7 @@ export default function Faq() {
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div>
             <h2 className="text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-              <span className="text-cyan-dark">FAQs:</span> Lead Generation for
-              Solar Companies
+              <span className="text-cyan-dark">FAQs:</span> Everything You Need to Know About Scaling Your Pipeline
             </h2>
             <div className="mt-8">
               <Link href="/industries" className="btn-outline-dark">

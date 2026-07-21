@@ -10,7 +10,7 @@ export default function Lead() {
             <Sparkles className="h-5 w-5 text-white" />
           </div>
           <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
-            What is Solar Lead Generation?
+Sustainable Power. Effortless Savings.
           </h2>
           <div className="mt-8">
             <Link href="/schedule-call" className="btn-outline-dark">
@@ -19,23 +19,8 @@ export default function Lead() {
           </div>
         </div>
 
-        <p className="text-lg leading-relaxed text-slate-600">
-          Like any lead generation service, the goal of solar lead generation
-          is to identify and attract potential customers interested in solar
-          energy services. It&apos;s a multi-step process that involves
-          identifying potential solar power customers, nurturing them through
-          the conversion funnel, and ultimately turning them into paying
-          clients. Lead generation for solar companies requires a targeted
-          approach and industry-specific expertise. At SunForge Leads, our
-          team of{" "}
-          <Link href="/services/appointment-setting" className="text-cyan-dark underline">
-            highly trained SDRs
-          </Link>{" "}
-          can help your sales team{" "}
-          <Link href="/schedule-call" className="text-cyan-dark underline">
-            book more appointments
-          </Link>{" "}
-          with qualified energy industry leads.
+        <p className="text-xl leading-relaxed text-slate-600">
+         Modern energy must be clean, resilient, and highly profitable. By upgrading to custom, high-efficiency solar, you instantly lock in predictable energy rates and slash carbon emissions with zero disruption to your daily routine. Gain total energy independence, eliminate utility volatility, and secure compounding monthly savings, driven by an intelligent system engineered for flawless, hands-off performance.
         </p>
       </div>
     </section>

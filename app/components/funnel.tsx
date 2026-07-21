@@ -9,18 +9,14 @@ export default function Funnel() {
         <div className="grid md:grid-cols-2">
           {/* Left: copy */}
           <div className="flex flex-col justify-center px-8 py-14 sm:px-12">
-            <h2 className="text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-              Ready to <span className="underline decoration-cyan decoration-4">improve</span>{" "}
-              your sales funnel?
+            <h2 className="text-3xl font-extrabold text-center leading-tight text-gray-800 sm:text-lg xl:text-4xl">
+              The most profitable energy strategy isn't finding cheaper power; it's generating your own.
             </h2>
-            <p className="mt-5 max-w-md text-lg text-slate-600">
-              Trust our top-rated SDR agency to help you find and close
-              qualified leads—quickly and cost-effectively.
-            </p>
-            <div className="mt-8">
+         
+            <div className="mt-8 *:flex justify-center">
               <Link
                 href="/schedule-call"
-                className="inline-flex items-center justify-center rounded-full bg-navy px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-navy-light"
+                className="inline-flex items-center justify-center text-center rounded-full bg-navy px-7 py-3 text-sm font-bold w-[70%] text-white transition-colors hover:bg-navy-light"
               >
                 Schedule a Call
               </Link>
@@ -52,7 +48,7 @@ export default function Funnel() {
             {/* Full-body photo, anchored to bottom so head/feet aren't cropped */}
             <div className="absolute inset-x-0 bottom-0 mx-auto h-full w-full max-w-95">
               <Image
-                src="/schedule-call.webp"
+                src="/solar-call.png"
                 alt="SDR team member"
                 fill
                 sizes="(max-width: 768px) 100vw, 380px"
@@ -60,6 +56,8 @@ export default function Funnel() {
                 priority
               />
             </div>
+
+           
           </div>
         </div>
       </div>

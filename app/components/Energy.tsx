@@ -15,26 +15,22 @@ export default function Energy() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <h2 className="text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-              We Tackle <span className="text-cyan-dark">Energy Industry Challenges</span>{" "}
-              Head-On
+              Turning Energy  <span className="text-cyan-dark">Industry Obstacles into Strategic </span>{" "}
+              Advantages
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-slate-600">
-              As an experienced, award-winning solar lead generation company,
-              we don&apos;t shy away from energy sector sales challenges. When
-              you work with SunForge Leads, we help you overcome the hurdles
-              of energy marketing and pull ahead with more growth
-              opportunities for your solar energy business.
+             Navigating commercial solar acquisition requires precision, depth, and proven frameworks. Top Dog Leads combines deep sector expertise with targeted outreach strategy to dismantle common industry challenges. We elevate your brand above the noise, empowering your sales team with a steady pipeline of decision-maker meetings built to scale your business predictably.
             </p>
             <div className="mt-8">
               <Link href="/schedule-call" className="btn-outline-dark">
-                Contact Our Award-Winning Solar Lead Generation Company
+Supercharge Your Deal Flow with Targeted Outreach
               </Link>
             </div>
           </div>
 
           <div className="rounded-2xl bg-surface p-6 sm:p-8">
             <p className="mb-5 text-base font-medium text-ink">
-              Does your energy company struggle with:
+Are These Sales Friction Points Bottlenecking Your Pipeline?
             </p>
             <ul className="flex flex-col gap-4">
               {CHALLENGES.map((challenge) => (

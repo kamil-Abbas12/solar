@@ -19,17 +19,12 @@ export default function Hero() {
           </p>
 
           <h1 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-            Fuel Your Growth With Expert{" "}
-            <span className="text-cyan">Solar Lead Generation Solutions</span>
+            Precision Solar Solutions{" "}
+            <span className="text-cyan">Designed to Scale Your Growth</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base text-white/80 sm:text-lg">
-            Standing out in the solar and renewable energy industry is tough. At
-            SunForge Leads, we help commercial energy companies gain a
-            competitive edge by tailoring engaging outreach messaging that
-            resonates with key decision makers. Power up your solar lead
-            generation strategy by partnering with our #1 solar marketing
-            agency.
+            In a saturated renewable energy landscape, generic outreach gets ignored. Top Dog Leads delivers a clear competitive edge for commercial solar providers. We combine deep industry insight with refined messaging frameworks to engage high-value decision-makers and convert high-intent prospects into active opportunities. Scale smarter with the #1 dedicated solar marketing partner.
           </p>
 
           <div className="mt-8 md:mt-10">
