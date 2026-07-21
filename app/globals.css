@@ -24,12 +24,10 @@
   --max-width-content: 1280px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Note: this site's design (navy/cyan/ink palette) is intentionally light-only.
+   Auto-flipping --foreground based on OS dark mode caused text/buttons that rely
+   on inherited color to turn near-white on white backgrounds and disappear.
+   If you want real dark mode later, it needs to be built per-section, not global. */
 
 body {
   background: var(--background);
@@ -66,4 +64,20 @@ body {
 .btn-outline:hover {
   background-color: var(--color-cyan);
   color: var(--color-navy-dark);
+}
+
+.btn-outline-dark {
+  border-radius: 9999px;
+  border: 2px solid var(--color-navy);
+  color: var(--color-navy);
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--color-navy);
+  color: white;
 }

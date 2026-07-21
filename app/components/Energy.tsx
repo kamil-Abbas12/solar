@@ -42,7 +42,7 @@ export default function Energy() {
                   key={challenge}
                   className="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm"
                 >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cyan" />
                   <span className="font-semibold text-ink">{challenge}</span>
                 </li>
               ))}

@@ -56,20 +56,20 @@ export default function Faq() {
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     aria-expanded={isOpen}
                   >
-                    <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-white shadow-sm">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white shadow-sm">
                       <Plus className="h-4 w-4 text-cyan" />
                     </span>
                     <span className="flex-1 text-lg font-bold text-ink">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`mt-1 h-5 w-5 flex-shrink-0 text-ink transition-transform ${
+                      className={`mt-1 h-5 w-5 shrink-0 text-ink transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {isOpen && (
-                    <p className="mt-3 pl-13 text-slate-600 md:pl-14">
+                    <p className="mt-3 pl-12 text-slate-600 md:pl-14">
                       {faq.answer}
                     </p>
                   )}

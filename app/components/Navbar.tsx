@@ -55,7 +55,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="border-t border-white/10 bg-navy-dark px-6 py-4 lg:hidden">
-       \
+       
         </div>
       )}
     </header>
