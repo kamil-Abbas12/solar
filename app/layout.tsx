@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "SunForge Leads | Solar Lead Generation Agency",
+  title: "Solar Top Dog Leads | Solar Lead Generation Agency",
   description:
-    "SunForge Leads helps commercial solar and energy companies book more sales-ready appointments with qualified leads.",
+    "Solar Top Dog Leads helps commercial solar and energy companies book more sales-ready appointments with qualified leads.",
 };
 
 export default function RootLayout({
