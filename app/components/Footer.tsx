@@ -15,21 +15,8 @@ const LEGAL = [
   { label: "Terms of Use", href: "/terms-of-use" },
 ];
 
-function XIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
 
-function YoutubeIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.5v-7l6.2 3.5Z" />
-    </svg>
-  );
-}
+
 
 function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -38,7 +25,13 @@ function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-
+function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z" />
+    </svg>
+  );
+}
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" {...props}>
@@ -63,8 +56,7 @@ export default function Footer() {
               className="h-10 w-auto object-contain"
             />
             <p className="mt-5 text-sm leading-6 text-white/70">
-              A focused landing page built to convert commercial solar interest into qualified conversations.
-            </p>
+Powering your pipeline with pre-qualified commercial solar leads.            </p>
 
             <ul className="mt-6 flex flex-col gap-3 text-sm text-white/70">
               {LEGAL.map((item) => (
@@ -99,18 +91,35 @@ export default function Footer() {
             </ul>
 
             <div className="mt-6 flex gap-4 text-accent">
-              <Link href="https://x.com" aria-label="X">
-                <XIcon className="h-5 w-5" />
-              </Link>
-              <Link href="https://youtube.com" aria-label="YouTube">
-                <YoutubeIcon className="h-5 w-5" />
-              </Link>
-              <Link href="https://linkedin.com" aria-label="LinkedIn">
-                <LinkedinIcon className="h-5 w-5" />
-              </Link>
-              <Link href="https://instagram.com" aria-label="Instagram">
-                <InstagramIcon className="h-5 w-5" />
-              </Link>
+                 <Link
+              href="https://www.facebook.com/TopDogLeadsLLC"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Top Dog Leads on Facebook"
+              className="text-blue-500/80 hover:text-white transition"
+            >
+              <FacebookIcon className="h-5 w-5" aria-hidden="true" />
+            </Link>
+
+            <Link
+              href="https://www.instagram.com/top.dogleadsllc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Top Dog Leads on Instagram"
+              className="text-pink-500/80 hover:text-white transition"
+            >
+              <InstagramIcon className="h-5 w-5" aria-hidden="true" />
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/company/top-dog-leads-llc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Top Dog Leads on LinkedIn"
+              className="text-blue-500/80 hover:text-white transition"
+            >
+              <LinkedinIcon className="h-5 w-5" aria-hidden="true" />
+            </Link>
             </div>
           </div>
         </div>
