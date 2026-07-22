@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fcfaf5;
+  --foreground: #1f2a24;
 }
 
 @theme inline {
@@ -11,73 +11,76 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Custom brand colors used across Navbar and buttons */
-  --color-navy: #0d1730;
-  --color-navy-dark: #0a1128;
-  --color-navy-light: #13224f;
-  --color-cyan: #22c3f0;
-  --color-cyan-dark: #0aa8d6;
-  --color-ink: #111827;
-  --color-surface: #f3f4f6;
+  /* New solar palette: warmer + more distinctive */
+  --color-brand: #2f6f5e;
+  --color-brand-dark: #245648;
+  --color-brand-soft: #dce8e2;
+  --color-accent: #f2b84b;
+  --color-accent-dark: #d89b2d;
+  --color-ink: #1f2a24;
+  --color-muted: #5f6b63;
+  --color-surface: #f4efe4;
+  --color-surface-alt: #ebe3d3;
+  --color-line: #ddd4c4;
 
-  /* Custom max-width used in header container */
   --max-width-content: 1280px;
 }
 
-/* Note: this site's design (navy/cyan/ink palette) is intentionally light-only.
-   Auto-flipping --foreground based on OS dark mode caused text/buttons that rely
-   on inherited color to turn near-white on white backgrounds and disappear.
-   If you want real dark mode later, it needs to be built per-section, not global. */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: var(--background);
+  background: linear-gradient(180deg, #fcfaf5 0%, #f8f3ea 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-primary {
   border-radius: 9999px;
-  background-color: var(--color-cyan);
-  color: var(--color-navy-dark);
-  padding: 0.625rem 1.5rem;
+  background-color: var(--color-brand);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
   display: inline-block;
+  box-shadow: 0 10px 30px rgba(47, 111, 94, 0.16);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-cyan-dark);
+  background-color: var(--color-brand-dark);
+  transform: translateY(-1px);
 }
 
 .btn-outline {
   border-radius: 9999px;
-  border: 2px solid var(--color-cyan);
-  color: var(--color-cyan);
-  padding: 0.625rem 1.5rem;
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand);
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: background-color 0.2s ease, color 0.2s ease;
   display: inline-block;
 }
 
 .btn-outline:hover {
-  background-color: var(--color-cyan);
-  color: var(--color-navy-dark);
+  background-color: var(--color-brand);
+  color: #ffffff;
 }
 
 .btn-outline-dark {
   border-radius: 9999px;
-  border: 2px solid var(--color-navy);
-  color: var(--color-navy);
-  padding: 0.625rem 1.5rem;
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: background-color 0.2s ease, color 0.2s ease;
   display: inline-block;
 }
 
 .btn-outline-dark:hover {
-  background-color: var(--color-navy);
-  color: white;
+  background-color: var(--color-ink);
+  color: var(--background);
 }

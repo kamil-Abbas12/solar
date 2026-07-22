@@ -3,25 +3,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-type NavItem = {
-  label: string;
-  href?: string;
-  children?: { label: string; href: string }[];
-};
-
-
+const NAV_LINKS = [
+  { label: "Home", href: "#hero" },
+  { label: "Benefits", href: "#benefits" },
+  { label: "Challenges", href: "#challenges" },
+  { label: "FAQs", href: "#faqs" },
+  { label: "Strategy", href: "#cta" },
+];
 
 export default function Navbar() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-navy-dark via-navy-light to-navy-dark">
+    <header className="sticky top-0 z-50 border-b border-line bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-3">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+        <Link href="/" className="shrink-0">
           <Image
             src="/logo.png"
             alt="SunForge Leads"
@@ -32,19 +30,26 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop nav */}
-       
+        <nav className="hidden items-center gap-8 lg:flex">
+          {NAV_LINKS.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-sm font-medium text-muted transition hover:text-brand"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
-        {/* CTA */}
         <div className="hidden lg:block">
           <Link href="/schedule-call" className="btn-primary">
             Schedule Call
           </Link>
         </div>
 
-        {/* Mobile toggle */}
         <button
-          className="text-white lg:hidden"
+          className="text-ink lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -52,10 +57,30 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-navy-dark px-6 py-4 lg:hidden">
-       
+        <div className="border-t border-line bg-background px-6 py-5 lg:hidden">
+          <div className="flex flex-col gap-4">
+            {NAV_LINKS.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-sm font-medium text-muted transition hover:text-brand"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            <div className="pt-2">
+              <Link
+                href="/schedule-call"
+                className="btn-primary w-full text-center"
+                onClick={() => setMobileOpen(false)}
+              >
+                Schedule Call
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </header>

@@ -2,23 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 
 const MENU = [
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Packages", href: "/packages" },
-  { label: "About Us", href: "/about" },
-  { label: "Industries Served", href: "/industries" },
-  { label: "Blog", href: "/blog" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "FAQs", href: "/faqs" },
+  { label: "Home", href: "#hero" },
+  { label: "Benefits", href: "#benefits" },
+  { label: "Challenges", href: "#challenges" },
+  { label: "FAQs", href: "#faqs" },
+  { label: "Strategy", href: "#cta" },
+  { label: "Book a Call", href: "/schedule-call" },
 ];
 
 const LEGAL = [
-  { label: "Cookie Policy", href: "/cookie-policy" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms of Use", href: "/terms-of-use" },
 ];
 
-// lucide-react removed all brand/logo icons in 1.0 (Twitter, Youtube, Linkedin, etc.
-// are no longer exported), so these are simple inline SVG replacements.
 function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -55,11 +51,10 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-dark text-white">
+    <footer className="bg-ink text-white">
       <div className="mx-auto max-w-content px-6 pb-14 pt-12">
         <div className="flex flex-col gap-10 border-t border-white/10 pt-10 md:flex-row md:items-start md:justify-between">
-          {/* Logo + legal links */}
-          <div>
+          <div className="max-w-sm">
             <Image
               src="/logo.png"
               alt="Solar Lead Generation Agency"
@@ -67,10 +62,14 @@ export default function Footer() {
               height={48}
               className="h-10 w-auto object-contain"
             />
+            <p className="mt-5 text-sm leading-6 text-white/70">
+              A focused landing page built to convert commercial solar interest into qualified conversations.
+            </p>
+
             <ul className="mt-6 flex flex-col gap-3 text-sm text-white/70">
               {LEGAL.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="hover:text-cyan">
+                  <Link href={item.href} className="transition hover:text-accent">
                     {item.label}
                   </Link>
                 </li>
@@ -78,27 +77,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Menu + CTA + social */}
-          <div className="md:w-72">
+          <div className="md:w-80">
             <div className="mb-4 flex items-center justify-between">
-              <h3 className="font-bold">Menu</h3>
+              <h3 className="font-bold">Landing Page</h3>
               <Link
                 href="/schedule-call"
-                className="rounded-full border-2 border-cyan px-4 py-1.5 text-xs font-bold text-white hover:bg-cyan"
+                className="rounded-full border-2 border-accent px-4 py-1.5 text-xs font-bold text-white transition hover:bg-accent hover:text-ink"
               >
-                Let&apos;s Talk!
+                Let&apos;s Talk
               </Link>
             </div>
+
             <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-white/70">
               {MENU.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="hover:text-cyan">
+                  <Link href={item.href} className="transition hover:text-accent">
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex gap-4 text-cyan">
+
+            <div className="mt-6 flex gap-4 text-accent">
               <Link href="https://x.com" aria-label="X">
                 <XIcon className="h-5 w-5" />
               </Link>
@@ -116,8 +116,22 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 bg-navy py-5 text-center text-sm text-white/70">
-        ©{new Date().getFullYear()} Solar
+      <div className="border-t border-white/10 bg-brand-dark">
+        <div className="mx-auto flex max-w-content flex-col items-center justify-between gap-4 px-6 py-5 text-sm text-white/70 md:flex-row">
+          <p>© {new Date().getFullYear()} Solar. All rights reserved.</p>
+
+          <div className="flex items-center gap-6">
+            <Link href="/privacy-policy" className="transition hover:text-accent">
+              Privacy Policy
+            </Link>
+
+            <span className="text-white/30">|</span>
+
+            <Link href="/terms-of-use" className="transition hover:text-accent">
+              Terms of Use
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
