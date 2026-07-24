@@ -1,13 +1,3 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
-export const metadata: Metadata = {
-  title: "Solar Top Dog Leads | Solar Lead Generation Agency",
-  description:
-    "Solar Top Dog Leads helps commercial solar and energy companies book more sales-ready appointments with qualified leads.",
-};
 import { NextRequest, NextResponse } from "next/server";
 
 const GOOGLE_FORM_URL =
@@ -68,7 +58,7 @@ export async function POST(req: NextRequest) {
     const ipAddress = forwardedFor ? forwardedFor.split(",")[0].trim() : "unknown";
 
     const payload = new URLSearchParams();
-    payload.append(ENTRY_IDS.campaign, "Hospital Indemnity");
+    payload.append(ENTRY_IDS.campaign, "Solar");
     payload.append(ENTRY_IDS.firstName, body.firstName ?? "");
     payload.append(ENTRY_IDS.lastName, body.lastName ?? "");
     payload.append(ENTRY_IDS.address, body.address ?? "");
@@ -104,19 +94,4 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
-}
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className="font-sans antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
 }
